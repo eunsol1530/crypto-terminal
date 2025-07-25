@@ -90,7 +90,7 @@ async.series({
 		cert: config.selfSigned.cert,
 	}, function(req, res) {
 		try {
-			res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*');
+			res.setHeader('Access-Control-Allow-Origin', 'https://trusted-origin.com'); // Use a literal value for CORS
 			res.setHeader('Access-Control-Request-Method', '*');
 			res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST');
 			res.setHeader('Access-Control-Allow-Headers', '*');
